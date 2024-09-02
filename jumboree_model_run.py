@@ -20,9 +20,8 @@ with open('train.pkl', 'rb') as file:
     scaler = pickle.load(file) 
 st.write(scaler)
 st.write(scaler.transform(np.array([333, 118, 4, 4.5, 4.5, 9.65,1])))
-scaler_std = StandardScaler()
-scaler_std.fit(scaler)
-scaled_input = scaler_std.transform(input1)
+
+scaled_input = scaler.transform(input1)
 st.write(scaled_input)
 with open('Jumbore_LinReg_model.pkl', 'rb') as file:
     loaded_model = pickle.load(file)
