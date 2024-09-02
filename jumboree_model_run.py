@@ -19,7 +19,7 @@ st.write(input1)
 with open('train.pkl', 'rb') as file:
     scaler = pickle.load(file) 
 st.write(scaler)
-st.write(scaler.transform(np.array([[333, 118, 4, 4.5, 4.5, 9.65,1]])))
+st.write(scaler.transform([[333, 118, 4, 4.5, 4.5, 9.65,1]]))
 
 scaled_input = scaler.transform(input1)
 st.write(scaled_input)
