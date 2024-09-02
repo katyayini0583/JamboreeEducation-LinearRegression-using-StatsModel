@@ -21,5 +21,5 @@ with open('Jumbore_LinReg_model.pkl', 'rb') as file:
     loaded_model = pickle.load(file)
 
 chance = loaded_model.predict(input)
-
-st.write(f' Chance of getting seat in Jamboree is: {chance}')
+if st.button('Submit'):
+    st.write(f' Chance of getting seat in Jamboree is: {chance}')
