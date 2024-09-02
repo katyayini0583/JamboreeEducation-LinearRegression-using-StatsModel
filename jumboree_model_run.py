@@ -15,7 +15,11 @@ Research = st.selectbox('If you have a research select 1 else 0',(0,1))
 input1 = [[GRE_Score,TOFEL_Score,Uni_Rating, SOP, LOR, CGPA, Research]]
 st.write(input1)
 #input = [[333, 118, 4, 4.5, 4.5, 9.65,1]]
+
+with open('train.pkl', 'rb') as file:
+    train_data = pickle.load(file) 
 scaler = StandardScaler()
+scaler.fit(train_data)
 input = scaler.fit_transform(input1)
 st.write(input)
 with open('Jumbore_LinReg_model.pkl', 'rb') as file:
