@@ -17,6 +17,7 @@ input1 = [[GRE_Score,TOFEL_Score,Uni_Rating, SOP, LOR, CGPA, Research]]
 #input = [[333, 118, 4, 4.5, 4.5, 9.65,1	]]
 scaler = StandardScaler()
 input = scaler.fit_transform(input1)
+print(input1)
 with open('Jumbore_LinReg_model.pkl', 'rb') as file:
     loaded_model = pickle.load(file)
 
