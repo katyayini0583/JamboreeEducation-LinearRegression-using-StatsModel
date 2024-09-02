@@ -19,6 +19,7 @@ st.write(input1)
 with open('train.pkl', 'rb') as file:
     scaler = pickle.load(file) 
 st.write(scaler)
+st.write(scaler.transform(input1))
 scaler_std = StandardScaler()
 scaler_std.fit(scaler)
 scaled_input = scaler_std.transform(input1)
