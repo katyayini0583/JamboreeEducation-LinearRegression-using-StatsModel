@@ -5,6 +5,10 @@ import streamlit as st
 from sklearn.preprocessing import StandardScaler
 st.header('Seat Prediction for Jumboree Education')
 
+
+st.slider('GRE Score',min_value= 260, max_value = 340)
+st.slider('Tofel Score',min_value= 260, max_value = 340)
+
 input = [[333, 118, 4, 4.5, 4.5, 9.65,1	]]
 scaler = StandardScaler()
 input = scaler.fit_transform(input)
