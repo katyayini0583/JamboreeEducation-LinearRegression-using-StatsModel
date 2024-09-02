@@ -17,9 +17,8 @@ st.write(input1)
 #input = [[333, 118, 4, 4.5, 4.5, 9.65,1]]
 
 with open('train.pkl', 'rb') as file:
-    train_data = pickle.load(file) 
-scaler = StandardScaler()
-scaler.fit_transform(train_data)
+    scaler = pickle.load(file) 
+
 input = scaler.transform(input1)
 st.write(input)
 with open('Jumbore_LinReg_model.pkl', 'rb') as file:
