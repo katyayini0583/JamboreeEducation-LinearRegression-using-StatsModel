@@ -19,7 +19,7 @@ st.write(input1)
 with open('train.pkl', 'rb') as file:
     train_data = pickle.load(file) 
 scaler = StandardScaler()
-scaler.fit(train_data)
+scaler.fit_transform(train_data)
 input = scaler.transform(input1)
 st.write(input)
 with open('Jumbore_LinReg_model.pkl', 'rb') as file:
