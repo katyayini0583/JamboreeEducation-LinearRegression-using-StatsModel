@@ -21,11 +21,11 @@ with open('train.pkl', 'rb') as file:
 st.write(scaler)
 scaler_std = StandardScaler()
 scaler_std.fit(scaler)
-input = scaler_std.transform(input1)
-st.write(input)
+scaled_input = scaler_std.transform(input1)
+st.write(scaled_input)
 with open('Jumbore_LinReg_model.pkl', 'rb') as file:
     loaded_model = pickle.load(file)
 
-chance = loaded_model.predict(input)
+chance = loaded_model.predict(scaled_input)
 if st.button('Submit'):
     st.write(f' Chance of getting seat in Jamboree is: {chance}')
