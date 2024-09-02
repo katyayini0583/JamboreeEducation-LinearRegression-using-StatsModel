@@ -5,9 +5,14 @@ import streamlit as st
 from sklearn.preprocessing import StandardScaler
 st.header('Seat Prediction for Jumboree Education')
 
-
-st.slider('GRE Score',min_value= 260, max_value = 340)
-st.slider('Tofel Score',min_value= 260, max_value = 340)
+GRE_Score = st.slider('GRE Score',min_value= 260, max_value = 340)
+TOFEL_Score = st.slider('Tofel Score',min_value= 260, max_value = 340)
+Uni_Rating = st.selectbox([1,2,3,4,5])
+SOP = 3
+LOR = 3
+CGPA = st.number_input('Enter CGPA between 6-10')
+Research = st.radio([0,1])
+input1 = [[GRE_Score,TOFEL_Score,Uni_Rating, SOP, LOR, CGPA, Research]]
 
 input = [[333, 118, 4, 4.5, 4.5, 9.65,1	]]
 scaler = StandardScaler()
