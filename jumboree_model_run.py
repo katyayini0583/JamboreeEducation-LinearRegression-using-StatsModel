@@ -27,7 +27,7 @@ with open('scaled_train.pkl', 'rb') as file:
 # Step-4. Transform the input with scaler
 scaled_input = scaler.transform(input1_2d)
 st.write(scaled_input.shape)
-scaled_input_2 = np.array([0.389986,0.602418,-0.098298,0.126796,0.564984,0.415018])
+scaled_input_2 = np.array([[0.389986,0.602418,-0.098298,0.126796,0.564984,0.415018,0.895434]])
 st.write(scaled_input_2.shape)
 
 # Step-5:Load model from pickle
