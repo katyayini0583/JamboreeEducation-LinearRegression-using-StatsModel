@@ -13,10 +13,10 @@ LOR = 3
 CGPA = st.number_input('Enter CGPA between 6-10')
 Research = st.selectbox('If you have a research select 1 else 0',(0,1))
 input1 = [GRE_Score,TOFEL_Score,Uni_Rating, SOP, LOR, CGPA, Research]
-input1_series = pd.Series(input1)
+
 input1_2d = np.array([input1])
 st.write(input1_2d.shape)
-st.write(input1_series)
+
 #input = [[333, 118, 4, 4.5, 4.5, 9.65,1]]
 
 with open('train.pkl', 'rb') as file:
@@ -25,8 +25,7 @@ st.write(scaler)
 st.write('new line')
 #st.write(np.array([[333, 118, 4, 4.5, 4.5, 9.65,1]]).shape)
 #st.write(scaler.transform([333, 118, 4, 4.5, 4.5, 9.65,1]))
-scaled_input_series = scaler.transform(input1_series)
-st.write(scaled_input_series)
+
 scaled_input = scaler.transform(input1_2d)
 st.write(scaled_input)
 with open('Jumbore_LinReg_model.pkl', 'rb') as file:
