@@ -20,13 +20,13 @@ st.write(input1_2d.shape)
 
 with open('scaled_train.pkl', 'rb') as file:
     scaler = pickle.load(file) 
-st.write(scaler)
-st.write('new line')
+#st.write(scaler)
+#st.write('new line')
 
 
 #main
 scaled_input = scaler.transform(input1_2d)
-st.write(scaled_input)
+#st.write(scaled_input)
 
 with open('Jumbore_LinReg_model.pkl', 'rb') as file:
     loaded_model = pickle.load(file)
