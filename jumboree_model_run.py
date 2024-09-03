@@ -16,6 +16,7 @@ input1 = [GRE_Score,TOFEL_Score,Uni_Rating, SOP, LOR, CGPA, Research]
 input1_series = pd.Series(input1)
 input1_2d = np.array([input1])
 st.write(input1_2d.shape)
+st.write(input1_series)
 #input = [[333, 118, 4, 4.5, 4.5, 9.65,1]]
 
 with open('train.pkl', 'rb') as file:
