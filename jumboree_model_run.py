@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 st.header('Welcome to Jumboree Education!!.. Check your chance of admission')
 
 GRE_Score = st.slider('GRE Score',min_value= 260, max_value = 340)
-TOFEL_Score = st.slider('Tofel Score',min_value= 260, max_value = 340)
+TOFEL_Score = st.slider('Tofel Score',min_value= 90, max_value = 120)
 Uni_Rating = st.selectbox('Select University Rating',(1,2,3,4,5))
 SOP = 5
 LOR = 5
