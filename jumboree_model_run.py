@@ -17,19 +17,27 @@ input1 = [GRE_Score,TOFEL_Score,Uni_Rating, SOP, LOR, CGPA, Research]
 input1_2d = np.array([input1])
 st.write(input1_2d.shape)
 
+dummy_input = np.array([337,118,4,4.5,4.5,9.65,1])
 
 with open('scaled_train.pkl', 'rb') as file:
     scaler = pickle.load(file) 
 st.write(scaler)
 st.write('new line')
 
-scaled_input1= scaler.transform(input1_2d)
-st.write(scaled_input1)
+#dummy
+scaled_dummy= scaler.transform(dummy_input)
+st.write(scaled_dummy)
 
+#main
 scaled_input = scaler.transform(input1_2d)
 st.write(scaled_input)
+
 with open('Jumbore_LinReg_model.pkl', 'rb') as file:
     loaded_model = pickle.load(file)
+
+chance1 = loaded_model.predict(scaled_dummy)
+st.write(f' Chance of getting seat in Jamboree is: {chance1}')
+
 
 chance = loaded_model.predict(scaled_input)
 if st.button('Submit'):
