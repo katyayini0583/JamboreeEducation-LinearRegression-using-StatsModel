@@ -26,12 +26,16 @@ with open('scaled_train.pkl', 'rb') as file:
 
 # Step-4. Transform the input with scaler
 scaled_input = scaler.transform(input1_2d)
+scaled_input_2 = np.array([0.389986,0.602418,-0.098298,0.126796,0.564984,0.415018])
 
 # Step-5:Load model from pickle
 with open('Jumbore_LinReg_model.pkl', 'rb') as file:
     loaded_model = pickle.load(file)
 
 # Step-6. Predict using model
+chance1 = loaded_model.predict(scaled_input_2)
+st.write(f' Chance of getting seat in Jamboree is: {chance1[0]}')
+
 chance = loaded_model.predict(scaled_input)
 if st.button('Submit'):
     st.write(f' Chance of getting seat in Jamboree is: {chance[0]}')
