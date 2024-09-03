@@ -18,13 +18,12 @@ input1_2d = np.array([input1])
 st.write(input1_2d.shape)
 
 
-
 with open('scaled_train.pkl', 'rb') as file:
     scaler = pickle.load(file) 
 st.write(scaler)
 st.write('new line')
 
-scaled_input1= scaler.transform(input)
+scaled_input1= scaler.transform(input1_2d)
 st.write(scaled_input1)
 
 scaled_input = scaler.transform(input1_2d)
