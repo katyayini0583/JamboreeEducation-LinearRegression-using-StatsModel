@@ -17,16 +17,13 @@ input1 = [GRE_Score,TOFEL_Score,Uni_Rating, SOP, LOR, CGPA, Research]
 input1_2d = np.array([input1])
 st.write(input1_2d.shape)
 
-#input = pd.DataFrame([333, 118, 4, 4.5, 4.5, 9.65,1])
+
 
 with open('scaled_train.pkl', 'rb') as file:
     scaler = pickle.load(file) 
 st.write(scaler)
 st.write('new line')
-#st.write(np.array([[333, 118, 4, 4.5, 4.5, 9.65,1]]).shape)
-#st.write(scaler.transform([333, 118, 4, 4.5, 4.5, 9.65,1]))
 
-#st.write(input)
 scaled_input1= scaler.transform(input)
 st.write(scaled_input1)
 
