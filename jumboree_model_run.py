@@ -28,6 +28,7 @@ with open('scaled_train.pkl', 'rb') as file:
 scaled_input = scaler.transform(input1_2d)
 st.write(scaled_input.shape)
 scaled_input_2 = np.array([0.389986,0.602418,-0.098298,0.126796,0.564984,0.415018])
+st.write(scaled_input_2.shape)
 
 # Step-5:Load model from pickle
 with open('Jumbore_LinReg_model.pkl', 'rb') as file:
