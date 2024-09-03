@@ -6,15 +6,15 @@ from sklearn.preprocessing import StandardScaler
 
 st.header('Welcome to Jumboree Education!!.. Check your chance of admission')
 
-col1,col2,col3 = st.columns(3)
+col1,col2 = st.columns(2)
 
 GRE_Score = col1.slider('GRE Score',min_value= 260, max_value = 340)
-TOFEL_Score = col1.slider('Tofel Score',min_value= 90, max_value = 120)
-Uni_Rating = col2.selectbox('Select University Rating',(1,2,3,4,5))
+TOFEL_Score = col2.slider('Tofel Score',min_value= 90, max_value = 120)
+Uni_Rating = col1.selectbox('Select University Rating',(1,2,3,4,5))
 SOP = 5
 LOR = 5
 CGPA = col2.number_input('Enter CGPA between 6-10')
-Research = col2.selectbox('If you have a research select 1 else 0',(0,1))
+Research = col1.selectbox('If you have a research select 1 else 0',(0,1))
 
 # step-1.Input from user
 input1 = [GRE_Score,TOFEL_Score,Uni_Rating, SOP, LOR, CGPA, Research]
