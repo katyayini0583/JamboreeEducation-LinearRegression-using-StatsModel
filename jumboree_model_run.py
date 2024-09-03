@@ -34,5 +34,5 @@ with open('Jumbore_LinReg_model.pkl', 'rb') as file:
 # Step-6. Predict using model
 chance = loaded_model.predict(scaled_input)
 if st.button('Submit'):
-    st.write(f' Chance of getting seat in Jamboree is: {chance[0]}')
+    st.write(f' Chance of getting seat in Jamboree is: {np.round(chance[0],2)}')
 
