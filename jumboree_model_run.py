@@ -14,5 +14,6 @@ CGPA = st.number_input('Enter CGPA between 6-10')
 Research = st.selectbox('If you have a research select 1 else 0',(0,1))
 input1 = np.array([[GRE_Score,TOFEL_Score,Uni_Rating, SOP, LOR, CGPA, Research]])
 st.write(input1)
+st.write(input1.type)
 #input = [[333, 118, 4, 4.5, 4.5, 9.65,1]]
 
