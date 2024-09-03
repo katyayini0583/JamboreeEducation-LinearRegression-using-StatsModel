@@ -26,7 +26,7 @@ st.write('new line')
 #st.write(np.array([[333, 118, 4, 4.5, 4.5, 9.65,1]]).shape)
 #st.write(scaler.transform([333, 118, 4, 4.5, 4.5, 9.65,1]))
 
-st.write(input)
+#st.write(input)
 scaled_input1= scaler.transform(input)
 st.write(scaled_input1)
 
